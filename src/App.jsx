@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Signin from './pages/auth/Signin';
 import Signup from './pages/auth/Signup';
 import Dashboard from './pages/Dashboard';
+import Settings from './pages/Settings';
 import AdminLayout from './components/layout/AdminLayout';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/admin/*" element={<AdminLayout />}>
             <Route index element={<Navigate to="/admin/dashboard" replace />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="settings" element={<Settings />} />
           </Route>
           
           {/* Default redirect */}
