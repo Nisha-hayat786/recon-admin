@@ -12,8 +12,16 @@ import ChatSupport from './pages/ChatSupport';
 import AdminLayout from './components/layout/AdminLayout';
 import Vendors from './pages/Vendors';
 import CreateVendor from './pages/CreateVendor';
+import Agreements from './pages/Agreements';
+import AgreementTerms from './pages/AgreementTerms';
+import Customers from './pages/Customers';
+import CreateCustomer from './pages/CreateCustomer';
+import LinkVendor from './pages/LinkVendor';
+import Messages from './pages/Messages';
+import Documents from './pages/Documents';
 
 function App() {
+  console.log('App component rendering');
   return (
     <Router>
       <div className="App">
@@ -33,7 +41,14 @@ function App() {
             <Route path="help-support" element={<HelpSupport />} />
             <Route path="chat-support" element={<ChatSupport />} />
             <Route path="vendors" element={<Vendors />} />
+            <Route path="agreements" element={<Agreements />} />
+            <Route path="agreement-terms" element={<AgreementTerms />} />
             <Route path="create-vendor" element={<CreateVendor />} />
+            <Route path="customers" element={<Customers />} />
+            <Route path="create-customer" element={<CreateCustomer />} />
+            <Route path="link-vendor" element={<LinkVendor />} />
+            <Route path="messages" element={<Messages />} />
+            <Route path="documents" element={<Documents />} />
           </Route>
           
           {/* Default redirect */}

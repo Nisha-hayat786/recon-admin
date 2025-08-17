@@ -3,7 +3,7 @@ import { FiCamera, FiUser, FiBriefcase, FiCalendar, FiMail, FiPhone, FiMapPin, F
 import { useNavigate } from 'react-router-dom';
 import vendor from "../assets/images/vendor.svg"
 
-const CreateVendor = () => {
+const CreateCustomer = () => {
   const navigate = useNavigate();
   const [type, setType] = useState('Business');
   const [logo, setLogo] = useState(null);
@@ -99,9 +99,9 @@ const CreateVendor = () => {
       <form className="w-full">
         {/* Header */}
         <div className="flex items-center justify-between mb-2">
-          <h2 className="text-xl font-semibold text-gray-900">Create Vendor</h2>
+          <h2 className="text-xl font-semibold text-gray-900">Create Customer</h2>
           <div className='flex items-center gap-2'>
-            <button type="button" className="border border-blue-600 px-4 py-2 rounded-lg text-blue-600" onClick={() => navigate('/admin/vendors')}>Cancel</button>
+            <button type="button" className="border border-blue-600 px-4 py-2 rounded-lg text-blue-600" onClick={() => navigate('/admin/customers')}>Cancel</button>
             <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded-lg">Save</button>
           </div>
         </div>
@@ -321,10 +321,10 @@ const CreateVendor = () => {
           </>
         )}
 
-        {/* Pre Qualify Vendors */}
+        {/* Pre Qualify Customers */}
         <div className="flex items-center gap-2 mt-4">
           <label className="flex items-center gap-2 cursor-pointer w-1/2">
-            <p className='w-full font-semibold'>Pre Qualify Vendors</p>
+            <p className='w-full font-semibold'>Pre Qualify Customers</p>
             <input type="checkbox" checked={showPreQualify} onChange={() => setShowPreQualify(!showPreQualify)} />
           </label>
         </div>
@@ -458,4 +458,4 @@ const CreateVendor = () => {
   );
 };
 
-export default CreateVendor;
+export default CreateCustomer;
