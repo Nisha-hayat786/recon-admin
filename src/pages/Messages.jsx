@@ -7,15 +7,6 @@ const Messages = () => {
   const [message, setMessage] = useState('');
   const [showMoreMessages, setShowMoreMessages] = useState({});
 
-  // Sample data
-  const entity = {
-    name: 'Smart Car Wash',
-    accountId: '451351354-1',
-    status: 'Active',
-    logo: '🚗',
-    agreementId: 'AT123456789'
-  };
-
   const revisionNotices = [
     {
       id: 1,

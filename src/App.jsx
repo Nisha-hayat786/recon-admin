@@ -19,6 +19,14 @@ import CreateCustomer from './pages/CreateCustomer';
 import LinkVendor from './pages/LinkVendor';
 import Messages from './pages/Messages';
 import Documents from './pages/Documents';
+import WorkOrders from './pages/workOrders/WorkOrders';
+import WorkOrderDetail from './pages/workOrders/WorkOrderDetail';
+import CreateWorkOrder from './pages/workOrders/CreateWorkOrder';
+import WorkOrderActivities from './pages/workOrders/WorkOrderActivities';
+import PendingApprovals from './pages/PendingApprovals';
+import BillsAndPayments from './pages/BillsAndPayments';
+import DebitCreditNotes from './pages/DebitCreditNotes';
+import DebitCreditNoteDetail from './pages/DebitCreditNoteDetail';
 
 function App() {
   console.log('App component rendering');
@@ -34,6 +42,7 @@ function App() {
           <Route path="/admin/*" element={<AdminLayout />}>
             <Route index element={<Navigate to="/admin/dashboard" replace />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="accounting" element={<Dashboard />} />
             <Route path="settings" element={<Settings />} />
             <Route path="reports" element={<Reports />} />
             <Route path="privacy-security" element={<PrivacySecurity />} />
@@ -49,6 +58,14 @@ function App() {
             <Route path="link-vendor" element={<LinkVendor />} />
             <Route path="messages" element={<Messages />} />
             <Route path="documents" element={<Documents />} />
+            <Route path="work-orders" element={<WorkOrders />} />
+            <Route path="work-order-detail/:orderId" element={<WorkOrderDetail />} />
+            <Route path="work-order-activities/:orderId" element={<WorkOrderActivities />} />
+            <Route path="pending-approvals" element={<PendingApprovals />} />
+            <Route path="reports/bills-payments" element={<BillsAndPayments />} />
+            <Route path="reports/debit-credit-notes" element={<DebitCreditNotes />} />
+            <Route path="reports/debit-credit-notes/:type/:noteId" element={<DebitCreditNoteDetail />} />
+            <Route path="create-work-order" element={<CreateWorkOrder />} />
           </Route>
           
           {/* Default redirect */}
